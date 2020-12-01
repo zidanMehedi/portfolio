@@ -22,6 +22,7 @@
   position: fixed;
   font-family: 'Ubuntu', 'sans-serif';
   transition: all 0.3s ease;
+  z-index: 1;
 }
 
 .navbar.stickyNav{
@@ -44,13 +45,13 @@
 .navbar .menu li{
   list-style: none;
   display: inline-block;
+  margin-left: 25px;
 }
 
 .navbar .menu li a{
   color : white;
   font-size: 18px;
   font-weight: 500px;
-  margin-left: 25px;
   transition: all 0.3s ease;
 }
 
@@ -59,12 +60,17 @@
 }
 
 .navbar.stickyNav .menu li a{
-  transition: 0.3;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  transition: border 0.2s linear;
+  padding: 5px 0;
 }
 
 .navbar.stickyNav .menu li a:hover{
   color: #fff;
+  border-bottom: 1px solid white;
 }
+
 
 .navbar .logo a span{
   color : crimson;
@@ -143,6 +149,109 @@
 }
 
 
+/*About Section Styling Begins*/
+
+section{
+  padding: 50px 0;
+}
+
+.about{
+  font-family: "Poppins", sans-serif;
+}
+
+.about .title{
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.about .title::before{
+  content: "";
+  position: absolute;
+  background: #111;
+  width: 150px;
+  height: 3px;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.about .title::after{
+  content: "who I am";
+  position: absolute;
+  background:#fff;
+  color: crimson;
+  bottom: 5px;
+  padding : 5px;
+  font-size: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.about .about-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about .about-content .left{
+  width: 43.8%;
+}
+
+.about .about-content .left img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.about .about-content .right{
+  width: 56.2%;
+}
+
+.about .about-content .right .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+  color: crimson;
+}
+
+.about .about-content .right p{
+  text-align: justify;
+}
+
+.about .about-content .right a{
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px 15px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover{
+  background: none;
+  color : crimson;
+}
+
+/*About Section Styling Begins*/
+
+
 
 @media (max-width : 1200px){
   .max-width{
@@ -173,7 +282,7 @@
   
 }
 
-@media (max-width : 947px){
+@media (max-width : 900px){
   .max-width{
     padding: 0 40px;
   }
@@ -190,17 +299,17 @@
     position: fixed;
     height: 100vh;
     width: 100%;
-    left: -100%;
-    top: 0;
+    top: -100%;
+    right : -100%;
     background: #111;
     text-align: center;
     padding-top: 80px;
     transition: all 0.3s ease;
-
   }
 
   .navbar .menu.active{
-    left: 0;
+    top: 0;
+    right : 0;
 
   }
 
@@ -212,6 +321,22 @@
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
+  }
+
+  
+
+  .about .about-content .column{
+    width: 100%;
+  }
+
+  .about .about-content .left{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about .about-content .right{
+    flex: 100%;
   }
 }
 
@@ -244,12 +369,12 @@
   
 }
 
-@media (max-width : 450px){
+@media (max-width : 550px){
   .max-width{
     padding: 0 25px;
   }
   .navbar .logo a{
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .menu-btn{
@@ -263,7 +388,7 @@
   }
 }
 
-@media (max-width : 320px){
+@media (max-width : 380px){
   .max-width{
     padding: 0 25px;
   }

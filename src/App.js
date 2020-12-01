@@ -1,13 +1,15 @@
 import React from 'react';
 import Navbar from './Navbar'
-import Section from './Section';
+import Home from './Home';
+import About from './About';
 
 function App() {
   
   return (
     <>
       <Navbar />
-      <Section/>
+      <Home/>
+      <About/>
     </>
   );
 }

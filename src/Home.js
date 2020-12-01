@@ -1,7 +1,7 @@
 import React from 'react';
 import me from './Zidan Bro.jpeg';
 
-function Section() {
+function Home() {
 
     return (
         <>
@@ -15,9 +15,8 @@ function Section() {
                     </div>
                 </div>
             </section>
-
         </>
     );
 }
 
-export default Section;
+export default Home;
