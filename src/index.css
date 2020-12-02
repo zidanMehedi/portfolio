@@ -26,7 +26,7 @@
 }
 
 .navbar.stickyNav{
-  background: crimson;
+  background: RGB(13, 151 , 129);
   padding: 10px 0px;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .navbar .menu li a:hover{
-  color : crimson;
+  color : RGB(13, 151 , 129);
 }
 
 .navbar.stickyNav .menu li a{
@@ -73,7 +73,7 @@
 
 
 .navbar .logo a span{
-  color : crimson;
+  color : RGB(13, 151 , 129);
   transition: color 0.3s ease;
 
 }
@@ -133,7 +133,7 @@
 
 .home .home-content .text-3 span{
   font-weight: 500;
-  color: crimson;
+  color: RGB(13, 151 , 129);
 }
 
 .home .max-width .home-content img {
@@ -141,11 +141,12 @@
   padding: 2px;
   background:  linear-gradient(
     180deg, 
-    crimson, 
+    RGB(13, 151 , 129), 
     rgba(0, 0, 0, 0)
   );
   width : 200px;
   height : 200px;
+  box-shadow: 0px 0px 150px RGB(13, 151 , 129)
 }
 
 
@@ -185,7 +186,7 @@ section{
   content: "";
   position: absolute;
   background:#fff;
-  color: crimson;
+  color: RGB(13, 151 , 129);
   bottom: 5px;
   padding : 5px;
   font-size: 16px;
@@ -227,7 +228,7 @@ section{
 }
 
 .about .about-content .right .text span{
-  color: crimson;
+  color: RGB(13, 151 , 129);
 }
 
 .about .about-content .right p{
@@ -236,13 +237,13 @@ section{
 
 .about .about-content .right a{
   display: inline-block;
-  background: crimson;
+  background: RGB(13, 151 , 129);
   color: #fff;
   font-size: 20px;
   padding: 5px 15px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid crimson;
+  border: 2px solid RGB(13, 151 , 129);
   font-weight: 500;
   border-radius: 5px;
   transition: all 0.3s ease;
@@ -250,7 +251,7 @@ section{
 
 .about .about-content .right a:hover{
   background: none;
-  color : crimson;
+  color : RGB(13, 151 , 129);
 }
 
 /*About Section Styling Ends*/
@@ -299,9 +300,9 @@ section{
 }
 
 .services .serv-content .card:hover{
-  background: crimson;
+  background: RGB(13, 151 , 129);
   transform: scale(1.01);
-  box-shadow: 0px 0px 20px crimson;
+  box-shadow: 0px 0px 20px RGB(13, 151 , 129);
 }
 
 .services .serv-content .card:hover .icon{
@@ -309,7 +310,7 @@ section{
 }
 
 .services .serv-content .card .icon{
-  color: crimson;
+  color: RGB(13, 151 , 129);
   font-size: 60px;
   padding-bottom: 10px;
 }
@@ -371,7 +372,7 @@ section{
 
 .skills .skills-content .card:hover{
   transform: scale(1.01);
-  box-shadow: 0px 0px 20px crimson;
+  box-shadow: 0px 0px 20px RGB(13, 151 , 129);
 }
 
 .skills .skills-content .card:hover .icon{
@@ -379,7 +380,7 @@ section{
 }
 
 .skills .skills-content .card .icon{
-  color: crimson;
+  color: RGB(13, 151 , 129);
   font-size: 60px;
   padding-bottom: 10px;
 }
@@ -415,7 +416,7 @@ section{
   
   .home .home-content .text-3 span{
     font-weight: 500;
-    color: crimson;
+    color: RGB(13, 151 , 129);
   }
   
   .home .max-width .home-content img {
@@ -512,7 +513,7 @@ section{
   
   .home .home-content .text-3 span{
     font-weight: 500;
-    color: crimson;
+    color: RGB(13, 151 , 129);
   }
   
   .home .max-width .home-content img {
@@ -535,7 +536,7 @@ section{
   }
   
   .services .serv-content .card .icon{
-    color: crimson;
+    color: RGB(13, 151 , 129);
     font-size: 45px;
     padding-bottom: 10px;
   }
@@ -621,7 +622,7 @@ section{
   
   .home .home-content .text-3 span{
     font-weight: 500;
-    color: crimson;
+    color: RGB(13, 151 , 129);
   }
 
   .about .about-content .right .text{
@@ -668,7 +669,7 @@ section{
   
   .home .home-content .text-3 span{
     font-weight: 500;
-    color: crimson;
+    color: RGB(13, 151 , 129);
   }
 
   .home .max-width .home-content img {
