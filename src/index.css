@@ -325,6 +325,77 @@ section{
 
 
 
+/*Skills Section Styling Begins*/
+
+
+.skills{
+  font-family: "Poppins", sans-serif;
+}
+
+.skills .title::before{
+  width: 135px;
+  height: 3px;
+}
+
+.skills .title::after{
+  content: "My Strengths";
+}
+
+ .skills .skills-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+.skills .skills-content .card{
+  width: calc(50% - 300px);
+  height : 300px;
+  background : none;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.skills .skills-content .card .box img{
+  margin : 10px 0;
+  height :80px;
+  width: 80px;
+}
+
+.skills .skills-content .card:hover{
+  transform: scale(1.01);
+  box-shadow: 0px 0px 20px crimson;
+}
+
+.skills .skills-content .card:hover .icon{
+  color: #fff;
+}
+
+.skills .skills-content .card .icon{
+  color: crimson;
+  font-size: 60px;
+  padding-bottom: 10px;
+}
+
+.skills .skills-content .card .text{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+
+
+
+/*Skills Section Styling Ends*/
+
+
 @media (max-width : 1200px){
   .max-width{
     padding: 0 40px;
@@ -352,6 +423,12 @@ section{
     height : 170px;
   }
   
+}
+
+@media (max-width : 1115px){
+  .skills .skills-content .card{
+    width: calc(50% - 200px);
+  }
 }
 
 @media (max-width : 900px){
@@ -410,6 +487,10 @@ section{
   .about .about-content .right{
     flex: 100%;
   }
+
+  .skills .skills-content .card{
+    width: calc(50% - 170px);
+  }
 }
 
 @media (max-width : 768px){
@@ -458,7 +539,23 @@ section{
     font-size: 45px;
     padding-bottom: 10px;
   }
+
+  .skills .skills-content .card{
+    width: calc(50% - 20px);
+    height: 250px;
+    padding: 10px 15px;
+  }
+
+  .skills .skills-content .card .box img{
+    margin : 20px 0;
+  }
   
+}
+@media (max-width : 620px){
+  .skills .skills-content .card{
+    width: 100%;
+    padding: 5px 5px;
+  }
 }
 
 @media (max-width : 600px){
@@ -545,6 +642,10 @@ section{
   .services .serv-content .card .text{
     font-size: 20px;
   }
+
+  .skills .skills-content .card .box img{
+    margin : 20px 0;
+  }
 }
 
 @media (max-width : 280px){
@@ -607,6 +708,10 @@ section{
   
   .services .serv-content .card .icon{
     font-size: 40px;
+  }
+
+  .skills .skills-content .card{
+    height: 300px;
   }
 }
 
