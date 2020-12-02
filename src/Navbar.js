@@ -4,6 +4,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
 import Nav from './Nav'
+import { Switch, Route } from 'react-router-dom';
 
 const NavClass = createContext();
 

@@ -50,12 +50,7 @@ function SkillsContent() {
             serviceName : 'CSS',
             description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
         },
-        {
-            key : 7,
-            serviceIcon : <img src = {html}/>,
-            serviceName : 'HTML',
-            description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-        },
+       
     ];
 
     const serviceS = (arr)=>{
