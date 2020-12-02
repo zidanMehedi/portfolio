@@ -22,7 +22,7 @@
   position: fixed;
   font-family: 'Ubuntu', 'sans-serif';
   transition: all 0.3s ease;
-  z-index: 1;
+  z-index: 99;
 }
 
 .navbar.stickyNav{
@@ -159,7 +159,7 @@ section{
   font-family: "Poppins", sans-serif;
 }
 
-.about .title{
+.title{
   position: relative;
   text-align: center;
   font-size: 30px;
@@ -169,7 +169,7 @@ section{
   font-family: "Ubuntu", sans-serif;
 }
 
-.about .title::before{
+.title::before{
   content: "";
   position: absolute;
   background: #111;
@@ -181,8 +181,8 @@ section{
   z-index: -1;
 }
 
-.about .title::after{
-  content: "who I am";
+.title::after{
+  content: "";
   position: absolute;
   background:#fff;
   color: crimson;
@@ -192,6 +192,10 @@ section{
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+}
+
+.about .title::after{
+  content: "who I am";
 }
 
 .about .about-content{
@@ -249,7 +253,75 @@ section{
   color : crimson;
 }
 
-/*About Section Styling Begins*/
+/*About Section Styling Ends*/
+
+
+/*Services Section Styling Begins*/
+
+
+.services{
+  font-family: "Poppins", sans-serif;
+  background-color : #111;
+  color: #fff;
+}
+
+.services .title::before{
+  width: 130px;
+  height: 3px;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.services .title::after{
+  content: "what I serve";
+  background-color: #111;
+  z-index: 2;
+}
+
+.services .serv-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.services .serv-content .card{
+  width: calc(50% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover{
+  background: crimson;
+  transform: scale(1.01);
+  box-shadow: 0px 0px 20px crimson;
+}
+
+.services .serv-content .card:hover .icon{
+  color: #fff;
+}
+
+.services .serv-content .card .icon{
+  color: crimson;
+  font-size: 60px;
+  padding-bottom: 10px;
+}
+
+.services .serv-content .card .text{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+
+/*Services Section Styling Ends*/
 
 
 
@@ -366,7 +438,34 @@ section{
     width : 150px;
     height : 150px;
   }
+
+  .services .serv-content .card{
+    width: calc(50% - 30px);
+  }
+
+  .services .serv-content .card .text{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+  }
+
+  .services .serv-content .card p{
+    font-size: 14px;
+  }
   
+  .services .serv-content .card .icon{
+    color: crimson;
+    font-size: 45px;
+    padding-bottom: 10px;
+  }
+  
+}
+
+@media (max-width : 600px){
+  .services .serv-content .card{
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width : 550px){
@@ -442,6 +541,10 @@ section{
     font-size: 10px;
     padding: 5px 15px;
   }
+
+  .services .serv-content .card .text{
+    font-size: 20px;
+  }
 }
 
 @media (max-width : 280px){
@@ -492,6 +595,18 @@ section{
     height: 200px;
     object-fit: cover;
     border-radius: 6px;
+  }
+
+  .services .serv-content .card .text{
+    font-size: 18px;
+  }
+
+  .services .serv-content .card p{
+    font-size: 12px;
+  }
+  
+  .services .serv-content .card .icon{
+    font-size: 40px;
   }
 }
 

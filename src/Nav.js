@@ -4,7 +4,7 @@ import {NavClass} from './Navbar';
 
 function Nav() {
 
-    const nav = ['Home', 'About', 'Skills', 'Contact'];
+    const nav = ['Home', 'About', 'Services', 'Skills', 'Contact'];
     const navClass = useContext(NavClass);
     return (
         <>
