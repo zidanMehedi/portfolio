@@ -8,7 +8,7 @@ function HomeContent() {
         <>
             <img src={me} />
             <div className='text-1'>Hello, My name is</div>
-            <div className='text-2'>Zidan Mehedi</div>
+            <div className='text-2'>Mehedi Hassan Zidan</div>
             <div className='text-3'>and I am a <span>Web Developer</span></div>
         </>
     );

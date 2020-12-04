@@ -49,7 +49,7 @@ function Navbar() {
     <>
       <nav className={navClass}>
         <div className='max-width'>
-          <div className='logo'><NavLink activeClassName="active-class" exact to='#'>Portfo<span>lio.</span></NavLink></div>
+          <div className='logo'><NavLink activeClassName="active-class" exact to='#'>zidan<span>mehedi</span></NavLink></div>
 
           <NavClass.Provider value={menuToggle.listClass}>
             <Nav />

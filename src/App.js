@@ -4,7 +4,7 @@ import Home from './Home';
 import About from './About';
 import Services from './Services';
 import Skills from './Skills';
-import { Switch, Route } from 'react-router-dom';
+import Contact from './Contact';
 
 function App() {
   
@@ -15,6 +15,7 @@ function App() {
         <About/>
         <Services/>
         <Skills/>
+        <Contact/>
     </>
   );
 }

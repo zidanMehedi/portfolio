@@ -32,6 +32,7 @@ function Nav(Props) {
         },
     ];
     const navClass = useContext(NavClass);
+
     return (
         <>
             <ul className={navClass}>
