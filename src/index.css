@@ -500,6 +500,12 @@ section{
   display: flex;
 }
 
+.contact .contact-content .right .void{
+
+  height: 35px;
+  
+}
+
 .contact .right form .field,
 .contact .right form .fields .field{
   width: 100%;
@@ -551,6 +557,7 @@ section{
   font-weight: 500;
   background: RGB(13, 151 , 129);
   transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 .contact .right form .button button:hover{
@@ -558,6 +565,53 @@ section{
   background: transparent;
 }
 
+.contact .left .social-icon{
+  position: relative;
+  bottom: 3px;
+  left : -12px;
+  margin-bottom : 40px;
+}
+
+.contact .left .social-icon .icon-button{
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.contact .left .social-icon .ld{
+  left : 50px;
+  color : #0072b1;
+}
+
+.contact .left .social-icon .fb{
+  left: 0px;
+  color : RGB(64, 100 , 172);
+}
+
+.contact .left .social-icon .gh{
+  left: 140px;
+  color : #4078c0;
+}
+
+.contact .left .social-icon .ld{
+  position: absolute;
+  left : 70px;
+  color : #0072b1;
+  transition: all 0.3s ease;
+}
+
+.contact .left .social-icon .icon-button:hover{
+  box-shadow: 0px 6px 10px RGB(13, 151 , 129);
+  
+}
+
+.contact .left .social-icon .icon{
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+.contact .left .social-icon .icon-button:hover .icon{
+  transform: scale(1.25);
+}
 /*Contact Section Styling Ends*/
 
 
@@ -714,6 +768,15 @@ section{
   /* .skills .carousel .card .box img{
     margin : 20px 0;
   } */
+
+  .contact .contact-content .column{
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .contact .contact-content .left .row .sub-title{
+    font-size: 14px;
+  }
   
 }
 @media (max-width : 620px){

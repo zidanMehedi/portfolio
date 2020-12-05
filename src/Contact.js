@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
 import Section from './Section';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import IconButton from '@material-ui/core/IconButton';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 
 function ContactContent() {
@@ -40,9 +43,27 @@ function ContactContent() {
                         </div>
                     </div>
                 </div>
+                <div className='social-icon'>
+                    <a href='http://facebook.com/zidanMehedi.171/' target='_blank'>
+                        <IconButton className='icon-button fb'>
+                            <FacebookIcon className=' icon' />
+                        </IconButton>
+                    </a>
+                    <a href='http://linkedin.com/in/zidanmehedi/' target='_blank'>
+                        <IconButton className='icon-button ld'>
+                            <LinkedInIcon className='icon' />
+                        </IconButton>
+                    </a>
+                    <a href='http://github.com/zidanMehedi' target='_blank'>
+                        <IconButton className='icon-button gh'>
+                            <GitHubIcon className='icon' />
+                        </IconButton>
+                    </a>
+                </div>
             </div>
             <div className={text_class}>
                 <div className='text'>Message Me</div>
+                <div className='void'></div>
                 <form action='#'>
                     <div className='fields'>
                         <div className={field_name}>
