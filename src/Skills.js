@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
 import Section from './Section';
-import laravel from './laravel.png';
-import react from './react.png';
-import php from './php.png';
-import js from './js.png';
-import mysql from './mysql.png';
-import css from './css.png';
-import html from './html.png';
+import laravel from './Images/laravel.png';
+import react from './Images/react.png';
+import php from './Images/php.png';
+import js from './Images/js.png';
+import mysql from './Images/mysql.png';
+import css from './Images/css.png';
+import html from './Images/html.png';
 import OwlCarousal from 'react-elastic-carousel';
 
 

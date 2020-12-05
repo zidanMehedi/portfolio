@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import Section from './Section';
-import me from './Zidan Bro.jpeg';
+import me from './Images/Zidan Bro.jpeg';
 
 
 function AboutContent() {

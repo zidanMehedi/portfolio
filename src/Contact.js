@@ -9,56 +9,89 @@ import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 
+const Address = (Props) => {
+    return (
+        <div className='row'>
+            {Props.icon}
+            <div className='info'>
+                <div className='head'>{Props.head}</div>
+                <div className='sub-title'>{Props.sub_title}</div>
+            </div>
+        </div>
+    );
+}
+
+const SocialMedia = (Props) => {
+    return (
+        <a href= {Props.href} target='_blank'>
+            <IconButton className={'icon-button ' + Props.site}>
+                {Props.icon}
+            </IconButton>
+        </a>
+    );
+}
+
+
 function ContactContent() {
     const image_class = "column left";
     const text_class = "column right";
     const field_name = "field name";
     const field_email = "field email";
     const field_textarea = "field textarea";
+
+    const AddressProperties = [
+        {
+            icon: <AccountCircleRoundedIcon className='icon' />,
+            head: 'Name',
+            sub_title: 'Mehedi Hassan Zidan',
+        },
+        {
+            icon: <HomeRoundedIcon className='icon' />,
+            head: 'Address',
+            sub_title: "Narayanganj, Bangladesh",
+        },
+        {
+            icon: <EmailRoundedIcon className='icon' />,
+            head: 'E-Mail',
+            sub_title: 'mkzzidan786@gmail.com',
+        },
+    ];
+
+    const SocialMedias = [
+        {
+            href: 'http://facebook.com/zidanMehedi.171/',
+            site: 'fb',
+            icon: <FacebookIcon className=' icon' />,
+        },
+        {
+            href: 'http://linkedin.com/in/zidanmehedi/',
+            site: 'ld',
+            icon: <LinkedInIcon className='icon' />,
+        },
+        {
+            href: 'http://github.com/zidanMehedi',
+            site: 'gh',
+            icon: <GitHubIcon className='icon' />,
+        },
+    ];
     return (
         <>
             <div className={image_class}>
                 <div class="text">Contact With Me</div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil doloribus distinctio itaque illo nam. </p>
                 <div className='icons'>
-                    <div className='row'>
-                        <AccountCircleRoundedIcon className='icon' />
-                        <div className='info'>
-                            <div className='head'>Name</div>
-                            <div className='sub-title'>Mehedi Hassan Zidan</div>
-                        </div>
-                    </div>
-                    <div className='row'>
-                        <HomeRoundedIcon className='icon' />
-                        <div className='info'>
-                            <div className='head'>Address</div>
-                            <div className='sub-title'>Narayanganj, Bangladesh</div>
-                        </div>
-                    </div>
-                    <div className='row'>
-                        <EmailRoundedIcon className='icon' />
-                        <div className='info'>
-                            <div className='head'>E-Mail</div>
-                            <div className='sub-title'>mkzzidan786@gmail.com</div>
-                        </div>
-                    </div>
+                    {
+                        AddressProperties.map((arr) => {
+                            return <Address icon={arr.icon} head={arr.head} sub_title={arr.sub_title} />
+                        })
+                    }
                 </div>
                 <div className='social-icon'>
-                    <a href='http://facebook.com/zidanMehedi.171/' target='_blank'>
-                        <IconButton className='icon-button fb'>
-                            <FacebookIcon className=' icon' />
-                        </IconButton>
-                    </a>
-                    <a href='http://linkedin.com/in/zidanmehedi/' target='_blank'>
-                        <IconButton className='icon-button ld'>
-                            <LinkedInIcon className='icon' />
-                        </IconButton>
-                    </a>
-                    <a href='http://github.com/zidanMehedi' target='_blank'>
-                        <IconButton className='icon-button gh'>
-                            <GitHubIcon className='icon' />
-                        </IconButton>
-                    </a>
+                    {
+                        SocialMedias.map((arr)=>{
+                            return <SocialMedia href = {arr.href} site = {arr.site} icon = {arr.icon}/>
+                        })
+                    }
                 </div>
             </div>
             <div className={text_class}>

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
 import { NavClass } from './Navbar';
 
 function Nav(Props) {
