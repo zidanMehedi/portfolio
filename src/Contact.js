@@ -7,6 +7,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import emailjs from 'emailjs-com';
 
 
 const Address = (Props) => {
@@ -74,6 +75,24 @@ function ContactContent() {
             icon: <GitHubIcon className='icon' />,
         },
     ];
+
+    const sendEmail = (event) => {
+        event.preventDefault();
+        console.log(event.target[0].name);
+
+       if(event.target[0].value !== "" && event.target[1].value !== "" && event.target[2].value !== "" && event.target[3].value !== ""){
+            emailjs.sendForm('service_a3vaprs', 'zidanmehedigmail', event.target, 'user_aTSNZ5f6VxQCfl4ZAyyGs').then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+       }else{
+           alert('Please Fill Up All Input Fields');
+       }
+
+        event.target.reset();
+    }
+
     return (
         <>
             <div className={image_class}>
@@ -97,23 +116,23 @@ function ContactContent() {
             <div className={text_class}>
                 <div className='text'>Message Me</div>
                 <div className='void'></div>
-                <form action='#'>
+                <form onSubmit = {sendEmail}>
                     <div className='fields'>
                         <div className={field_name}>
-                            <input type='text' placeholder='Name'></input>
+                            <input type='text' placeholder='Name' name = 'name'></input>
                         </div>
                         <div className={field_email}>
-                            <input type='text' placeholder='Email'></input>
+                            <input type='text' placeholder='Email' name = 'email'></input>
                         </div>
                     </div>
                     <div className='field'>
-                        <input type='text' placeholder='Subject'></input>
+                        <input type='text' placeholder='Subject' name = 'subject'></input>
                     </div>
                     <div className={field_textarea}>
-                        <textarea cols='30' rows='10' placeholder='Message'></textarea>
+                        <textarea cols='30' rows='10' placeholder='Message' name = 'message'></textarea>
                     </div>
                     <div className='button'>
-                        <button type='submit' > Send </button>
+                        <button type='submit' name = 'submit'> Send </button>
                     </div>
                 </form>
             </div>

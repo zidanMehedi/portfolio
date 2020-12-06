@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import me from './Images/Zidan Bro.jpeg';
+import Typical from "react-typical";
 
 function HomeContent() {
 
@@ -9,7 +10,18 @@ function HomeContent() {
             <img src={me} />
             <div className='text-1'>Hello, My name is</div>
             <div className='text-2'>Mehedi Hassan Zidan</div>
-            <div className='text-3'>and I am a <span>Web Developer</span></div>
+            <div className='text-3'>and I am a <span>
+                <Typical
+                    steps={[
+                        'Web Developer',
+                        1000,
+                        ' Web Designer',
+                        1000,
+                    ]}
+                    wrapper = "b"
+                    loop={Infinity}
+                />
+            </span></div>
         </>
     );
 }

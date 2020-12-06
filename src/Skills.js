@@ -12,8 +12,6 @@ import OwlCarousal from 'react-elastic-carousel';
 
 
 function SkillsContent() {
-    const image_class = "column left";
-    const text_class = "column right";
 
     const myServices = [
         {
