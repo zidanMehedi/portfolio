@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Section from './Section';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
