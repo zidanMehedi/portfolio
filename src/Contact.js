@@ -24,7 +24,7 @@ const Address = (Props) => {
 
 const SocialMedia = (Props) => {
     return (
-        <a href= {Props.href} target='_blank'>
+        <a href={Props.href} target='_blank'>
             <IconButton className={'icon-button ' + Props.site}>
                 {Props.icon}
             </IconButton>
@@ -78,17 +78,59 @@ function ContactContent() {
 
     const sendEmail = (event) => {
         event.preventDefault();
-        console.log(event.target[0].name);
+        var message = document.getElementById('message');
+        var name = document.getElementById('name');
+        var email = document.getElementById('email');
+        var invalid_email = document.getElementById('invalid_email');
+        var invalid_name = document.getElementById('invalid_name');
 
-       if(event.target[0].value !== "" && event.target[1].value !== "" && event.target[2].value !== "" && event.target[3].value !== ""){
+        var checkName = /^[A-Za-z. ]{3,}$/;
+        var checkEmail = /^[A-Za-z_.0-9]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+
+        if (event.target[0].value === "" || event.target[1].value === "" || event.target[2].value === "" || event.target[3].value === "") {
+            message.innerText = 'Please fill up all the boxes!!';
+            message.style.color = 'crimson';
+            invalid_email.style.color = 'transparent';
+            invalid_name.style.color = 'transparent';
+            name.style.border = '1px solid RGB(13, 151 , 129)';
+            email.style.border = '1px solid RGB(13, 151 , 129)';
+
+            return false;
+
+        } else if (!checkName.test(name.value)) {
+            message.style.color = 'transparent';
+            invalid_email.style.color = 'transparent';
+            invalid_name.innerText = '** Please write a valid name';
+            invalid_name.style.color = 'crimson';
+            name.style.border = '1px solid crimson';
+            email.style.border = '1px solid RGB(13, 151 , 129)';
+            name.value = "";
+            return false;
+
+        } else if (!checkEmail.test(email.value)) {
+            message.style.color = 'transparent';
+            name.style.border = '1px solid RGB(13, 151 , 129)';
+            invalid_name.style.color = 'transparent';
+            invalid_email.innerText = '** Please write a valid email';
+            invalid_email.style.color = 'crimson';
+            email.style.border = '1px solid crimson';
+            email.value = ""
+            return false;
+        } else {
             emailjs.sendForm('service_a3vaprs', 'zidanmehedigmail', event.target, 'user_aTSNZ5f6VxQCfl4ZAyyGs').then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-       }else{
-           alert('Please Fill Up All Input Fields');
-       }
+                message.innerText = 'Your message has been sent successfully!!';
+                message.style.color = "green";
+            }, (error) => {
+                message.innerText = 'Message Sending Failed!!';
+                message.style.color = 'crimson';
+                invalid_email.style.color = 'transparent';
+                invalid_name.style.color = 'transparent';
+                name.style.border = '1px solid RGB(13, 151 , 129)';
+                email.style.border = '1px solid RGB(13, 151 , 129)';
+
+            });
+        }
+
 
         event.target.reset();
     }
@@ -97,42 +139,44 @@ function ContactContent() {
         <>
             <div className={image_class}>
                 <div className="text">Contact With Me</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil doloribus distinctio itaque illo nam. </p>
+                <p>You can find me on the given information below. To contact with me, Please feel free to message me.</p>
                 <div className='icons'>
                     {
                         AddressProperties.map((arr, index) => {
-                            return <Address key = {index} icon={arr.icon} head={arr.head} sub_title={arr.sub_title} />
+                            return <Address key={index} icon={arr.icon} head={arr.head} sub_title={arr.sub_title} />
                         })
                     }
                 </div>
                 <div className='social-icon'>
                     {
-                        SocialMedias.map((arr, index)=>{
-                            return <SocialMedia key = {index} href = {arr.href} site = {arr.site} icon = {arr.icon}/>
+                        SocialMedias.map((arr, index) => {
+                            return <SocialMedia key={index} href={arr.href} site={arr.site} icon={arr.icon} />
                         })
                     }
                 </div>
             </div>
             <div className={text_class}>
                 <div className='text'>Message Me</div>
-                <div className='void'></div>
-                <form onSubmit = {sendEmail}>
+                <span id='message'>Your Message Has Been Sent!!!</span>
+                <form onSubmit={sendEmail}>
                     <div className='fields'>
                         <div className={field_name}>
-                            <input type='text' placeholder='Name' name = 'name'></input>
+                            <input type='text' id='name' placeholder='Name' name='name'></input>
+                            <span className='invalid_alert' id='invalid_name'>Name</span>
                         </div>
                         <div className={field_email}>
-                            <input type='text' placeholder='Email' name = 'email'></input>
+                            <input type='text' id='email' placeholder='Email' name='email'></input>
+                            <span className='invalid_alert' id='invalid_email'>Email</span>
                         </div>
                     </div>
                     <div className='field'>
-                        <input type='text' placeholder='Subject' name = 'subject'></input>
+                        <input type='text' placeholder='Subject' name='subject' id='subject'></input>
                     </div>
                     <div className={field_textarea}>
-                        <textarea cols='30' rows='10' placeholder='Message' name = 'message'></textarea>
+                        <textarea cols='30' rows='10' placeholder='Message' name='message' id='textMessage'></textarea>
                     </div>
                     <div className='button'>
-                        <button type='submit' name = 'submit'> Send </button>
+                        <button type='submit' name='submit'> Send </button>
                     </div>
                 </form>
             </div>

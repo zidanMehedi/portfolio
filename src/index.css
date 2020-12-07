@@ -502,17 +502,11 @@ section{
   display: flex;
 }
 
-.contact .contact-content .right .void{
-
-  height: 45px;
-  
-}
-
 .contact .right form .field,
 .contact .right form .fields .field{
   width: 100%;
   height: 45px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .contact .right form .name{
@@ -559,7 +553,6 @@ section{
   font-weight: 500;
   background: RGB(13, 151 , 129);
   transition: all 0.3s ease;
-  margin-top: 10px;
 }
 
 .contact .right form .button button:hover{
@@ -675,6 +668,17 @@ footer span a:hover{
 }
 
 
+.invalid_alert{
+  font-size: 12px;
+  position: relative;
+  bottom : 3px;
+  color: transparent;
+}
+
+
+#message{
+  color : transparent
+}
 
 
 @media (max-width : 1200px){
@@ -1009,6 +1013,10 @@ footer span a:hover{
 
   .skills .carousel .card p{
     font-size : 10px;
+  }
+
+  #scroll-up-btn{
+    bottom : 90px;
   }
 }
 
