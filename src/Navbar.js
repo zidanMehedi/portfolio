@@ -1,39 +1,36 @@
-import React, { useState, createContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
-import Nav from './Nav'
-
-const NavClass = createContext();
+import nav from './Nav';
 
 function Navbar() {
+
   const [navClass, setNavClass] = useState('navbar')
   const [menuToggle, setMenuToggle] = useState({
     listClass: 'menu',
-    menuButton: <MenuRoundedIcon style={{ color: '#fff' }} />,
+    button: <MenuRoundedIcon style={{ color: '#fff' }} />,
     toggleStatus: false,
   });
 
   const toggleMenu = () => {
+
     if (menuToggle.toggleStatus == false) {
       setMenuToggle((preValue) => {
         return {
           listClass: 'menu active',
-          menuButton: <CloseRoundedIcon style={{ color: '#fff' }} />,
+          button: <CloseRoundedIcon style={{ color: '#fff' }} />,
           toggleStatus: !preValue.toggleStatus,
         }
       });
-
     } else if (menuToggle.toggleStatus == true) {
       setMenuToggle((preValue) => {
         return {
           listClass: 'menu',
-          menuButton: <MenuRoundedIcon style={{ color: '#fff' }} />,
+          button: <MenuRoundedIcon style={{ color: '#fff' }} />,
           toggleStatus: !preValue.toggleStatus,
         }
       });
-
     }
   }
 
@@ -49,23 +46,27 @@ function Navbar() {
     <>
       <nav className={navClass}>
         <div className='max-width'>
-          <div className='logo'><NavLink activeClassName="active-class" exact to='#'>zidan<span>mehedi</span></NavLink></div>
+          <div className='logo'><a href='#home'>zidan<span>mehedi</span></a></div>
 
-          <NavClass.Provider value={menuToggle.listClass}>
-            <Nav />
-          </NavClass.Provider>
+          <ul className={menuToggle.listClass}>
+            {nav.map((val, index) => {
+              return (
+                <li key = {index}>
+                  <a onClick={toggleMenu} href={val.path}>{val.name}</a>
+                </li>
+              );
+            })}
+          </ul>
 
           <div className='menu-btn'>
             <IconButton onClick={toggleMenu} aria-label="MenuRoundedIcon">
-              {menuToggle.menuButton}
+              {menuToggle.button}
             </IconButton>
           </div>
         </div>
       </nav>
-
     </>
   );
 }
 
 export default Navbar;
-export { NavClass };

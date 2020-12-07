@@ -19,10 +19,10 @@ function ServicesContent() {
         },
     ];
 
-    const serviceS = (arr)=>{
+    const serviceS = (arr, index)=>{
         return(
-            <div class="card">
-                <div class="box">
+            <div className="card" key = {index}>
+                <div className="box">
                     {arr.serviceIcon}
                     <div className='text'>{arr.serviceName}</div>
                     <p>{arr.description}</p>

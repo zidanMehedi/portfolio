@@ -994,7 +994,7 @@ footer span a:hover{
   }
 
   .skills .carousel .card p{
-    font-size: 12px;
+    font-size: 5px;
   }
 
   .contact .right form .button{
@@ -1005,6 +1005,10 @@ footer span a:hover{
     transform: scale(0.7);
     position: relative;
     left : -22px;
+  }
+
+  .skills .carousel .card p{
+    font-size : 10px;
   }
 }
 
@@ -1019,7 +1023,7 @@ footer span a:hover{
   }
 
   .skills .carousel .card p{
-    font-size: 12px;
+    font-size: 10px;
   }
   .home .home-content .text-2{
     font-size: 20px;
@@ -1095,5 +1099,9 @@ footer span a:hover{
   /* .skills .carousel .card{
     height: 300px;
   } */
+
+  .skills .carousel .card .text{
+    font-size: 14px;
+  }
 }
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Section from './Section';
 import me from './Images/Zidan Bro.jpeg';
 import Typical from "react-typical";
@@ -18,8 +18,8 @@ function AboutContent() {
             <div className={image_class}>
                 <img src={me} />
             </div>
-            <div class={text_class}>
-                <div class="text">Hello I'm Zidan. I'm a <span>
+            <div className={text_class}>
+                <div className="text">Hello I'm Zidan. I'm a <span>
                 <Typical
                     steps={[
                         'Web Developer',
@@ -30,8 +30,8 @@ function AboutContent() {
                     wrapper = "b"
                     loop={Infinity}
                 /></span></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil doloribus distinctio itaque illo nam. Error adipisci facilis perspiciatis odit, facere, repellat aut dolorem at quas amet explicabo, sit sed minus ea voluptate deleniti est esse cumque corrupti voluptatum iusto nihil vel? Ea mollitia, adipisci totam cupiditate consequatur qui beatae aliquam possimus? Et illo provident rerum cumque modi omnis praesentium?</p>
-                <a id = 'download' href = {cv} traget = '_blank'>Download CV</a>
+                <p>I am a Final Year Undergrade Student of Computer Science and Engineering. Currently I am working on Web Development Projects. I have 1 year of experinece on desgning and developing innovative Web Applications. I have skills on building both Static and Dynamic Web Applications. I use modern Web Technologies while building Websites and Web Applications. I have strong professional, presentational and communicational skills to communicate with clients and I always try provide best of my services to them. To know more about me, please feel free to go through my resume attached below. Thank You for visiting my website.</p>
+                <a id = 'download' href = {cv} traget = '_blank'>Download Resume</a>
             </div>
 
         </>

@@ -13,7 +13,7 @@ function App() {
   return (
     <>
         <Reset/>
-        <Navbar />
+        <Navbar/>
         <Home/>
         <About/>
         <Services/>

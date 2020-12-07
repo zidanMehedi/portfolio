@@ -96,19 +96,19 @@ function ContactContent() {
     return (
         <>
             <div className={image_class}>
-                <div class="text">Contact With Me</div>
+                <div className="text">Contact With Me</div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil doloribus distinctio itaque illo nam. </p>
                 <div className='icons'>
                     {
-                        AddressProperties.map((arr) => {
-                            return <Address icon={arr.icon} head={arr.head} sub_title={arr.sub_title} />
+                        AddressProperties.map((arr, index) => {
+                            return <Address key = {index} icon={arr.icon} head={arr.head} sub_title={arr.sub_title} />
                         })
                     }
                 </div>
                 <div className='social-icon'>
                     {
-                        SocialMedias.map((arr)=>{
-                            return <SocialMedia href = {arr.href} site = {arr.site} icon = {arr.icon}/>
+                        SocialMedias.map((arr, index)=>{
+                            return <SocialMedia key = {index} href = {arr.href} site = {arr.site} icon = {arr.icon}/>
                         })
                     }
                 </div>
