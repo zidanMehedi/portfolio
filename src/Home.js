@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from './Section';
-import me from './Images/z.jpg';
+import me from './Images/z3.jpg';
 import Typical from "react-typical";
 
 function HomeContent() {
