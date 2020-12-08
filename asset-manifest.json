@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1e91b318.chunk.css",
-    "main.js": "/portfolio/static/js/main.4a72a31d.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.4a72a31d.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.93bac596.chunk.css",
+    "main.js": "/portfolio/static/js/main.259a517f.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.259a517f.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.c3cfb48a.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.c3cfb48a.js.map",
-    "static/js/2.8a5a567f.chunk.js": "/portfolio/static/js/2.8a5a567f.chunk.js",
-    "static/js/2.8a5a567f.chunk.js.map": "/portfolio/static/js/2.8a5a567f.chunk.js.map",
+    "static/js/2.0f78fbe1.chunk.js": "/portfolio/static/js/2.0f78fbe1.chunk.js",
+    "static/js/2.0f78fbe1.chunk.js.map": "/portfolio/static/js/2.0f78fbe1.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.1e91b318.chunk.css.map": "/portfolio/static/css/main.1e91b318.chunk.css.map",
-    "static/js/2.8a5a567f.chunk.js.LICENSE.txt": "/portfolio/static/js/2.8a5a567f.chunk.js.LICENSE.txt",
+    "static/css/main.93bac596.chunk.css.map": "/portfolio/static/css/main.93bac596.chunk.css.map",
+    "static/js/2.0f78fbe1.chunk.js.LICENSE.txt": "/portfolio/static/js/2.0f78fbe1.chunk.js.LICENSE.txt",
     "static/media/Mehedi_Hassan_Zidan.ed386de9.pdf": "/portfolio/static/media/Mehedi_Hassan_Zidan.ed386de9.pdf",
     "static/media/Zidan Bro.c6d0ea3c.jpeg": "/portfolio/static/media/Zidan Bro.c6d0ea3c.jpeg",
     "static/media/css.9d56f943.png": "/portfolio/static/media/css.9d56f943.png",
-    "static/media/index.css": "/portfolio/static/media/darkWallpaper.4583f7a8.jpg",
+    "static/media/index.css": "/portfolio/static/media/darkWallpaper-min.775412db.jpg",
     "static/media/js.afcba61e.png": "/portfolio/static/media/js.afcba61e.png",
     "static/media/laravel.8b2939ca.png": "/portfolio/static/media/laravel.8b2939ca.png",
     "static/media/loader2.cfc783bb.gif": "/portfolio/static/media/loader2.cfc783bb.gif",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c3cfb48a.js",
-    "static/js/2.8a5a567f.chunk.js",
-    "static/css/main.1e91b318.chunk.css",
-    "static/js/main.4a72a31d.chunk.js"
+    "static/js/2.0f78fbe1.chunk.js",
+    "static/css/main.93bac596.chunk.css",
+    "static/js/main.259a517f.chunk.js"
   ]
 }
