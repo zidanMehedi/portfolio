@@ -28,12 +28,13 @@ function App() {
 
   const [customRender, setCustomRender] = useState(<Preloader/>);
 
-  var setPromise = () => { 
-    return new Promise((promise) => {setTimeout(promise(), 5000)}); 
-  }
+  // var setPromise = () => { 
+  //   return new Promise((promise) => {promise()}); 
+  // }
   useEffect(()=>{
     
-    setPromise().then(setCustomRender(<MyApp/>))
+    //setPromise().then(()=>{setTimeout(setCustomRender(<MyApp/>), 2000)})
+    setTimeout(()=>{setCustomRender(<MyApp/>)}, 1000);
   },[])
 
 
