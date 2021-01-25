@@ -71,7 +71,7 @@ useEffect(()=>{
     <>
       <nav className={navClass}>
         <div className='max-width'>
-          <div className='logo' id = 'logo'><a href='https://zidanMehedi.github.io/portfolio/home'>zidan<span>Mehedi</span></a></div>
+          <div className='logo' id = 'logo'><a href='https://zidanMehedi.github.io/portfolio'>zidan<span>Mehedi</span></a></div>
 
           <ul className={menuToggle.listClass}>
             {nav.map((val, index) => {
