@@ -7,7 +7,7 @@ function HomeContent() {
 
     return (
         <>
-            <img src={me} />
+            <img src={me} alt = "Profile Picture"/>
             <div className='text-1'>Hello, My name is</div>
             <div className='text-2'>Mehedi Hassan Zidan</div>
             <div className='text-3'>and I am a <span>

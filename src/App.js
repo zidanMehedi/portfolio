@@ -29,12 +29,20 @@ function App() {
   const [customRender, setCustomRender] = useState(<Preloader/>);
 
   // var setPromise = () => { 
-  //   return new Promise((promise) => {promise()}); 
+  //    return new Promise((resolve, reject) => {if(resolve){resolve();}else{reject()};}); 
   // }
+
+  const renderIt = (component, callback) => {
+      callback(component);
+  }
   useEffect(()=>{
     
-    //setPromise().then(()=>{setTimeout(setCustomRender(<MyApp/>), 2000)})
-    setTimeout(()=>{setCustomRender(<MyApp/>)}, 1000);
+    // setPromise().then(()=>{setCustomRender(<MyApp/>)}).catch(()=>{
+    //   setCustomRender("Hala");
+    // })
+    //setTimeout(()=>{setCustomRender(<MyApp/>)}, 1000);
+
+    renderIt(<MyApp/>, setCustomRender);
   },[])
 
 

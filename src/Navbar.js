@@ -46,7 +46,7 @@ function Navbar() {
     <>
       <nav className={navClass}>
         <div className='max-width'>
-          <div className='logo'><a href='#home'>zidan<span>mehedi</span></a></div>
+          <div className='logo'><a href='#home'>zidan<span>Mehedi</span></a></div>
 
           <ul className={menuToggle.listClass}>
             {nav.map((val, index) => {
