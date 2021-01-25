@@ -44,23 +44,28 @@ function Navbar() {
 useEffect(()=>{
   let path = document.getElementsByClassName("url");
   let logoPath = document.getElementById("logo");
-  path[0].addEventListener('click',()=>{
+  path[0].addEventListener('click',(event)=>{
+    event.preventDefault();
     window.scrollTo(0, 0);
   });
-  path[1].addEventListener('click',()=>{
+  path[1].addEventListener('click',(event)=>{
+    event.preventDefault();
     window.scrollTo(0, 580);
   });
-  path[2].addEventListener('click',()=>{
+  path[2].addEventListener('click',(event)=>{
+    event.preventDefault();
     window.scrollTo(0, 1092);
   });
-  path[3].addEventListener('click',()=>{
+  path[3].addEventListener('click',(event)=>{
+    event.preventDefault();
     window.scrollTo(0, 1645);
   });
-  path[4].addEventListener('click',()=>{
+  path[4].addEventListener('click',(event)=>{
+    event.preventDefault();
     window.scrollTo(0, 2500);
   });
 
-  logoPath.addEventListener('click', ()=>{
+  logoPath.addEventListener('click', (event)=>{
     window.scrollTo(0, 0);
   })
   
