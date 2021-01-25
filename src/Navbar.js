@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
@@ -41,18 +41,43 @@ function Navbar() {
       setNavClass('navbar');
     }
   });
+useEffect(()=>{
+  let path = document.getElementsByClassName("url");
+  let logoPath = document.getElementById("logo");
+  path[0].addEventListener('click',()=>{
+    window.scrollTo(0, 0);
+  });
+  path[1].addEventListener('click',()=>{
+    window.scrollTo(0, 580);
+  });
+  path[2].addEventListener('click',()=>{
+    window.scrollTo(0, 1092);
+  });
+  path[3].addEventListener('click',()=>{
+    window.scrollTo(0, 1645);
+  });
+  path[4].addEventListener('click',()=>{
+    window.scrollTo(0, 2500);
+  });
+
+  logoPath.addEventListener('click', ()=>{
+    window.scrollTo(0, 0);
+  })
+  
+},[])
+  
 
   return (
     <>
       <nav className={navClass}>
         <div className='max-width'>
-          <div className='logo'><a href='#home'>zidan<span>Mehedi</span></a></div>
+          <div className='logo' id = 'logo'><a href='https://zidanMehedi.github.io/portfolio/home'>zidan<span>Mehedi</span></a></div>
 
           <ul className={menuToggle.listClass}>
             {nav.map((val, index) => {
               return (
-                <li key = {index}>
-                  <a onClick={toggleMenu} href={val.path}>{val.name}</a>
+                <li key={index}>
+                  <a className = "url" onClick={toggleMenu} href={val.path}>{val.name}</a>
                 </li>
               );
             })}

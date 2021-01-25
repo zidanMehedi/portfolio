@@ -1,27 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Section from './Section';
 import BrushRoundedIcon from '@material-ui/icons/BrushRounded';
 import DeveloperModeRoundedIcon from '@material-ui/icons/DeveloperModeRounded';
 
 function ServicesContent() {
+    const [cardClass, setCardClass] = useState("card");
     const myServices = [
         {
             key : 1,
             serviceIcon : <BrushRoundedIcon className='icon' />,
             serviceName : 'Web Design',
-            description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veritatis enim perspiciatis, rerum animi a.'
+            description : 'To help the clients to have Well-Designed websites that will help to form a good impression on their prospective customers'
         },
         {
             key : 2,
             serviceIcon : <DeveloperModeRoundedIcon className='icon' />,
             serviceName : 'Web Developing',
-            description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore veritatis enim perspiciatis, rerum animi a.'
+            description : 'To make a strong backend process of a Website make target audiences aware of the services and/or products that the clients are offering'
         },
     ];
 
+    useEffect(() => {
+        document.addEventListener('scroll', () => {
+            if (window.scrollY > 950) {
+                setCardClass('card animation');
+            }
+        });
+    },[]);
+
     const serviceS = (arr, index)=>{
         return(
-            <div className="card" key = {index}>
+            <div className={cardClass} key = {index}>
                 <div className="box">
                     {arr.serviceIcon}
                     <div className='text'>{arr.serviceName}</div>

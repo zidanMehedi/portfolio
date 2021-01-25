@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Section from './Section';
 import laravel from './Images/laravel.png';
 import react from './Images/react.png';
@@ -12,6 +12,7 @@ import OwlCarousal from 'react-elastic-carousel';
 
 
 function SkillsContent() {
+    const [cardClass, setCardClass] = useState("card");
 
     const myServices = [
         {
@@ -58,6 +59,14 @@ function SkillsContent() {
 
     ];
 
+    useEffect(() => {
+        document.addEventListener('scroll', () => {
+            if (window.scrollY > 1400) {
+                setCardClass('card animation');
+            }
+        });
+    },[]);
+
     const breakpoints = [
         { width: 500, itemsToShow: 1 },
         { width: 768, itemsToShow: 2 },
@@ -68,7 +77,7 @@ function SkillsContent() {
     const serviceS = (arr) => {
         return (
 
-            <div className="card" key = {arr.key}>
+            <div className={cardClass} key = {arr.key}>
                 <div className="box">
                     <div>{arr.serviceIcon}</div>
                     <div className='text'>{arr.serviceName}</div>
@@ -81,6 +90,7 @@ function SkillsContent() {
 
         );
     }
+
     return (
         <>
          <OwlCarousal breakPoints={breakpoints}>

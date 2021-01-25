@@ -218,6 +218,7 @@ section{
 
 .about .about-content .left{
   width: 43.8%;
+  opacity : 0;
 }
 
 .about .about-content .left img{
@@ -227,8 +228,29 @@ section{
   border-radius: 6px;
 }
 
+.about .about-content .left.aboutLeftAnimation{
+  animation : slideRight 1s ease;
+  opacity : 1;
+}
+
+@keyframes slideRight{
+  from{transform : translateX(-500px)}
+  to{transform : translateX(0px)}
+}
+
 .about .about-content .right{
   width: 56.2%;
+  opacity : 0;
+}
+
+.about .about-content .right.aboutRightAnimation{
+  animation : slideLeft 1.02s ease;
+  opacity : 1;
+}
+
+@keyframes slideLeft{
+  from{transform : translateX(500px)}
+  to{transform : translateX(0px);}
 }
 
 .about .about-content .right .text{
@@ -299,6 +321,7 @@ section{
 
 .services .serv-content .card{
   width: calc(50% - 20px);
+  height : 250px;
   background: #222;
   text-align: center;
   border-radius: 6px;
@@ -307,6 +330,17 @@ section{
   cursor: pointer;
   transform: scale(1);
   transition: all 0.3s ease;
+  opacity : 0;
+}
+
+.services .serv-content .card.animation{
+  animation: zoom 1s ease;
+  opacity : 1
+}
+
+@keyframes zoom{
+  from{transform : scale(0.1)}
+  to{transform : scale(1)}
 }
 
 .services .serv-content .card:hover{
@@ -400,6 +434,17 @@ section{
   cursor: pointer;
   transform: scale(1);
   transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.skills .carousel .card.animation{
+  animation : rotation 0.1s ease-out 6;
+  opacity : 1;
+}
+
+@keyframes rotation{
+  from{transform : rotateY(0deg)}
+  to{transform : rotateY(360deg)}
 }
 
 .skills .carousel .card img{
@@ -467,7 +512,25 @@ section{
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 10px;
-} 
+}
+
+.contact .contact-content .left{
+  opacity : 0;
+}
+
+.contact .contact-content .left.contactLeftAnimation{
+  animation : slideRight 1s ease;
+  opacity : 1;
+}
+
+.contact .contact-content .right{
+  opacity : 0;
+}
+
+.contact .contact-content .right.contactRightAnimation{
+  animation : slideLeft 1.02s ease;
+  opacity : 1;
+}
 
 .contact .contact-content .left p{
   text-align: justify;
@@ -644,7 +707,7 @@ footer span a:hover{
 #scroll-up-btn{
   position: fixed;
   bottom : 60px;
-  right : 30px;
+  right : 20px;
   border: 1px solid RGB(13, 151 , 129);
   border-radius: 50%;
   transition: all 0.5s ease;

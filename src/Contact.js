@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Section from './Section';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
@@ -34,8 +34,8 @@ const SocialMedia = (Props) => {
 
 
 function ContactContent() {
-    const image_class = "column left";
-    const text_class = "column right";
+    const [image_class, set_image_class] = useState("column left");
+    const [text_class, set_text_class] = useState("column right");
     const field_name = "field name";
     const field_email = "field email";
     const field_textarea = "field textarea";
@@ -75,6 +75,16 @@ function ContactContent() {
             icon: <GitHubIcon className='icon' />,
         },
     ];
+
+    useEffect(() => {
+        document.addEventListener('scroll', () => {
+           
+            if (window.scrollY > 1900) {
+                set_image_class('column left contactLeftAnimation');
+                set_text_class('column right contactRightAnimation');
+            }
+        });
+    },[]);
 
     const sendEmail = (event) => {
         event.preventDefault();
