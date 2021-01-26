@@ -60,8 +60,9 @@ function SkillsContent() {
     ];
 
     useEffect(() => {
+        let skill = document.getElementById("skills");
         document.addEventListener('scroll', () => {
-            if (window.scrollY > 1400) {
+            if (window.scrollY > skill.offsetTop - 250) {
                 setCardClass('card animation');
             }
         });
@@ -105,7 +106,7 @@ function Skills() {
     const ca = "carousel owl-carousel";
     return (
         <>
-            <Section sectionClassName="skills" sectionId="skills" widthClassName="max-width" contentClassName={ca} titleValue="My Skills" content={<SkillsContent />} />
+            <Section sectionClassName="skills" id="skills" widthClassName="max-width" contentClassName={ca} titleValue="My Skills" content={<SkillsContent />} />
         </>
     );
 }

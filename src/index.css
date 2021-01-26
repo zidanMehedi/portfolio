@@ -155,8 +155,26 @@ html{
   transition : all 0.5s ease;
 }
 
+.glowAnimation{
+  animation : glow 2s ease; 
+}
+
+.dimAnimation{
+  animation : dim 2s ease; 
+}
+
 .home .max-width .home-content img:hover {
-  box-shadow: 0px 0px 150px RGB(13, 151 , 129)
+  box-shadow: 0px 0px 200px RGB(13, 151 , 129)
+}
+
+@keyframes glow{
+  from{box-shadow: 0px 0px 60px RGB(13, 151 , 129)}
+  to{box-shadow: 0px 0px 200px RGB(13, 151 , 129)}
+}
+
+@keyframes dim{
+  to{box-shadow: 0px 0px 60px RGB(13, 151 , 129)}
+  from{box-shadow: 0px 0px 200px RGB(13, 151 , 129)}
 }
 
 
@@ -168,6 +186,8 @@ section{
 
 .about{
   font-family: "Poppins", sans-serif;
+  /* padding-top: 85px;*/
+  padding-bottom : 65px;
 }
 
 .title{
@@ -296,6 +316,8 @@ section{
   font-family: "Poppins", sans-serif;
   background-color : #111;
   color: #fff;
+  /* padding-top: 85px;
+  padding-bottom: 110px; */
 }
 
 .services .title::before{
@@ -303,11 +325,15 @@ section{
   height: 3px;
   z-index: 2;
   background-color: #fff;
+  position: absolute;
+  top : 50px;
 }
 
 .services .title::after{
   content: "what I serve";
   background-color: #111;
+  position: absolute;
+  top : 35px;
   z-index: 2;
 }
 
@@ -375,6 +401,7 @@ section{
 
 .skills{
   font-family: "Poppins", sans-serif;
+  /* padding: 85px 0px; */
 }
 
 .skills .title::before{

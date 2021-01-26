@@ -21,8 +21,9 @@ function ServicesContent() {
     ];
 
     useEffect(() => {
+        let service = document.getElementById("services");
         document.addEventListener('scroll', () => {
-            if (window.scrollY > 950) {
+            if (window.scrollY > service.offsetTop - 250) {
                 setCardClass('card animation');
             }
         });
@@ -50,7 +51,7 @@ function ServicesContent() {
 function Services() {
     return (
         <>
-            <Section sectionClassName="services" sectionId="services" widthClassName="max-width" contentClassName="serv-content" titleValue="My Services" content={<ServicesContent/>} />
+            <Section sectionClassName="services" id="services" widthClassName="max-width" contentClassName="serv-content" titleValue="My Services" content={<ServicesContent/>} />
         </>
     );
 }

@@ -42,27 +42,33 @@ function Navbar() {
     }
   });
 useEffect(()=>{
+
   let path = document.getElementsByClassName("url");
   let logoPath = document.getElementById("logo");
+  let service = document.getElementById("services");
+  let about = document.getElementById("about");
+  let skill = document.getElementById("skills");
+  let contact = document.getElementById("contact");
+
   path[0].addEventListener('click',(event)=>{
     event.preventDefault();
     window.scrollTo(0, 0);
   });
   path[1].addEventListener('click',(event)=>{
     event.preventDefault();
-    window.scrollTo(0, 580);
+    window.scrollTo(0, about.offsetTop-60);
   });
   path[2].addEventListener('click',(event)=>{
     event.preventDefault();
-    window.scrollTo(0, 1092);
+    window.scrollTo(0, service.offsetTop-127);
   });
   path[3].addEventListener('click',(event)=>{
     event.preventDefault();
-    window.scrollTo(0, 1645);
+    window.scrollTo(0, skill.offsetTop-60);
   });
   path[4].addEventListener('click',(event)=>{
     event.preventDefault();
-    window.scrollTo(0, 2500);
+    window.scrollTo(0, contact.offsetTop-30);
   });
 
   logoPath.addEventListener('click', (event)=>{
@@ -76,7 +82,7 @@ useEffect(()=>{
     <>
       <nav className={navClass}>
         <div className='max-width'>
-          <div className='logo' id = 'logo'><a href='https://zidanMehedi.github.io/portfolio'>zidan<span>Mehedi</span></a></div>
+          <div className='logo' id = 'logo'><a href='localhost:3000/portfolio/#'>zidan<span>Mehedi</span></a></div>
 
           <ul className={menuToggle.listClass}>
             {nav.map((val, index) => {

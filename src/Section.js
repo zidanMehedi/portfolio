@@ -5,7 +5,7 @@ function Section(Props) {
 
     return (
         <>
-            <section className={Props.sectionClassName} id={Props.sectionId}>
+            <section className={Props.sectionClassName} id={Props.id}>
                 <div className={Props.widthClassName}>
                     <Title value={Props.titleValue} />
                     <div className={Props.contentClassName}>

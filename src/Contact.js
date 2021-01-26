@@ -77,9 +77,10 @@ function ContactContent() {
     ];
 
     useEffect(() => {
+        let contact = document.getElementById("contact");
         document.addEventListener('scroll', () => {
            
-            if (window.scrollY > 1900) {
+            if (window.scrollY > contact.offsetTop - 250) {
                 set_image_class('column left contactLeftAnimation');
                 set_text_class('column right contactRightAnimation');
             }
@@ -199,7 +200,7 @@ function Contact() {
 
     return (
         <>
-            <Section sectionClassName="contact" sectionId="contact" widthClassName="max-width" contentClassName="contact-content" titleValue="Contact" content={<ContactContent />} />
+            <Section sectionClassName="contact" id="contact" widthClassName="max-width" contentClassName="contact-content" titleValue="Contact" content={<ContactContent />} />
         </>
     );
 }

@@ -17,9 +17,8 @@ function AboutContent() {
         event.preventDefault();
     }
 
-    useEffect(() => {
-        document.addEventListener('scroll', () => {
-            setEvent(
+    useEffect(()=>{
+         setEvent(
                 <Typical
                     steps={[
                         'Web Developer',
@@ -31,7 +30,11 @@ function AboutContent() {
                     loop={Infinity}
                 />
             );
-            if (window.scrollY > 400) {
+    },[])
+    useEffect(() => {
+        let about = document.getElementById("about");
+        document.addEventListener('scroll', () => {
+            if (window.scrollY > about.offsetTop-250) {
                 set_image_class('column left aboutLeftAnimation');
                 set_text_class('column right aboutRightAnimation');
             }
@@ -61,7 +64,7 @@ function About() {
 
     return (
         <>
-            <Section sectionClassName="about" sectionId="about" widthClassName="max-width" contentClassName="about-content" titleValue="About Me" content={<AboutContent />} />
+            <Section sectionClassName="about" id="about" widthClassName="max-width" contentClassName="about-content" titleValue="About Me" content={<AboutContent />} />
         </>
     );
 }
