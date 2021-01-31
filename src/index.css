@@ -882,17 +882,19 @@ footer span a:hover{
 
 }
 
-@media (max-width : 768px){
+@media screen and (max-width : 768px) and (orientation : portrait){
 
 
   .navbar .menu li a{
     font-size: 40px;
     padding : 30px;
+    transform: translateY(50%);
   }
   
   .navbar.stickyNav .menu li a{
     font-size: 40px;
     padding : 30px;
+    transform: translateY(50%);
   }
 
   .max-width{
@@ -961,7 +963,24 @@ footer span a:hover{
   }
   
 }
-@media (max-width : 620px){
+
+/* @media (max-width : 768px) and (orientation : landscape){
+  .navbar .menu li a{
+    font-size: 20px;
+    transform: translateY(70%);
+  }
+
+  .navbar .menu li{
+    display: inline;
+  }
+
+  .navbar.stickyNav .menu li a{
+    font-size: 20px;
+    transform: translateY(70%);
+  }
+} */
+
+@media screen and (max-width : 620px) and (orientation : portrait){
   /* .skills .carousel .card{
     width: 100%;
     padding: 5px 5px;
@@ -981,7 +1000,7 @@ footer span a:hover{
   }
 }
 
-@media (max-width : 600px){
+@media screen and (max-width : 600px) and (orientation : portrait){
 
   .navbar .menu li a{
     font-size: 30px;
@@ -999,7 +1018,7 @@ footer span a:hover{
   }
 }
 
-@media (max-width : 550px){
+@media screen and (max-width : 550px) and (orientation : portrait){
   .max-width{
     padding: 0 25px;
   }
@@ -1037,7 +1056,7 @@ footer span a:hover{
   }
 }
 
-@media (max-width : 508px){
+@media screen and (max-width : 508px) and (orientation : portrait){
 
   .navbar .menu li a{
     font-size: 30px;
@@ -1086,7 +1105,21 @@ footer span a:hover{
   }
 }
 
-@media (max-width : 380px){
+@media screen and (aspect-ratio : 375/667) and (orientation : portrait){
+  .navbar .menu li a{
+    padding : 10px 10px;
+    font-size: 25px;
+    transform: translateY(50%);
+  }
+  
+  .navbar.stickyNav .menu li a{
+    padding : 10px 10px;
+    font-size: 25px;
+    transform: translateY(50%);
+  }
+}
+
+@media screen and (aspect-ratio : 375/812) and (orientation : portrait){
   .max-width{
     padding: 0 25px;
   }
@@ -1096,11 +1129,13 @@ footer span a:hover{
   }
 
   .navbar .menu li a{
-    padding : 10px 10px;
+    padding : 20px 10px;
+    transform: translateY(50%);
   }
   
   .navbar.stickyNav .menu li a{
-    padding : 10px 10px;
+    padding : 20px 10px;
+    transform: translateY(50%);
   }
   
   .home .home-content .text-3 span{
@@ -1163,39 +1198,49 @@ footer span a:hover{
   }
 }
 
-@media (max-width : 640px) and (max-height : 360px){
+@media screen and (aspect-ratio : 411/823) and (orientation : portrait){
   .navbar .menu li a{
-    font-size: 20px;
+    padding : 20px 10px;
     transform: translateY(50%);
+    font-size: 30px;
   }
-
-  .navbar .menu li{
-    display: inline;
-  }
-
+  
   .navbar.stickyNav .menu li a{
-    font-size: 20px;
+    padding : 20px 10px;
     transform: translateY(50%);
+    font-size: 30px;
   }
 }
 
-@media (max-width : 731px) and (max-height : 471px){
+@media screen and (aspect-ratio : 320/568) and (orientation : portrait){
   .navbar .menu li a{
-    font-size: 20px;
-    transform: translateY(70%);
+    padding : 10px 10px;
+    transform: translateY(-20%);
+    font-size: 25px;
   }
-
-  .navbar .menu li{
-    display: inline;
-  }
-
+  
   .navbar.stickyNav .menu li a{
-    font-size: 20px;
-    transform: translateY(70%);
+    padding : 10px 10px;
+    transform: translateY(-20%);
+    font-size: 25px;
   }
 }
 
-@media (max-width : 823px) and (max-height : 411px){
+@media screen and (aspect-ratio : 360/640) and (orientation : portrait){
+  .navbar .menu li a{
+    padding : 10px 10px;
+    transform: translateY(50%);
+    font-size: 25px;
+  }
+  
+  .navbar.stickyNav .menu li a{
+    padding : 10px 10px;
+    transform: translateY(50%);
+    font-size: 25px;
+  }
+}
+
+/* @media (max-width : 823px) and (max-height : 411px){
   .navbar .menu li a{
     font-size: 25px;
     transform: translateY(70%);
@@ -1211,9 +1256,9 @@ footer span a:hover{
     transform: translateY(70%);
     padding : 30px;
   }
-}
+} */
 
-@media (max-width : 568px) and (max-height : 320px){
+/* @media (max-width : 568px) and (max-height : 320px){
   .navbar .menu li a{
     font-size: 20px;
     transform: translateY(60%);
@@ -1229,9 +1274,9 @@ footer span a:hover{
     transform: translateY(60%);
     padding: 15px;
   }
-}
+} */
 
-@media (max-width : 667px) and (max-height : 375px){
+/* @media (max-width : 667px) and (max-height : 375px){
   .navbar .menu li a{
     font-size: 20px;
     transform: translateY(90%);
@@ -1247,9 +1292,9 @@ footer span a:hover{
     transform: translateY(90%);
     padding: 15px;
   }
-}
+} */
 
-@media (max-width : 736px) and (max-height : 414px){
+/* @media (max-width : 736px) and (max-height : 414px){
   .navbar .menu li a{
     font-size: 20px;
     transform: translateY(90%);
@@ -1265,8 +1310,8 @@ footer span a:hover{
     transform: translateY(90%);
     padding: 20px;
   }
-}
-
+} */
+/* 
 @media (max-width : 720px) and (max-height : 540px){
   .navbar .menu li a{
     font-size: 20px;
@@ -1279,9 +1324,9 @@ footer span a:hover{
     transform: translateY(-50%);
     padding: 10px;
   }
-}
+} */
 
-@media (max-width : 653px) and (max-height : 280px){
+/* @media (max-width : 653px) and (max-height : 280px){
   .navbar .menu li a{
     font-size: 20px;
     transform: translateY(20%);
@@ -1299,9 +1344,9 @@ footer span a:hover{
     transform: translateX(-20%);
     padding: 20px;
   }
-}
+} */
 
-@media (max-width : 320px){
+@media screen and (max-width : 320px) and (orientation : portrait){
 
   .navbar .menu li a{
     font-size: 20px;
@@ -1332,9 +1377,17 @@ footer span a:hover{
   }
 }
 
-@media (max-width : 280px){
+@media screen and (max-width : 280px) and (orientation : portrait){
   .max-width{
     padding: 0 25px;
+  }
+
+  .navbar .menu li a{
+    transform: translateY(50%);
+  }
+  
+  .navbar.stickyNav .menu li a{
+    transform: translateY(50%);
   }
 
   .home .home-content .text-1{
@@ -1402,4 +1455,200 @@ footer span a:hover{
     font-size: 14px;
   }
 }
+
+@media screen and (aspect-ratio : 823/411) and (orientation : landscape){
+  .navbar .menu li a{
+    font-size: 25px;
+    transform: translateY(100%);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .navbar .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .navbar.stickyNav .menu li a{
+    font-size: 25px;
+    transform: translateY(100%);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+
+@media screen and (aspect-ratio : 812/375) and (orientation : landscape){
+  .navbar .menu li a{
+    font-size: 25px;
+    transform: translateY(80%);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .navbar.stickyNav .menu li a{
+    font-size: 25px;
+    transform: translateY(80%);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (aspect-ratio : 736/414) and (orientation : landscape){
+  .navbar .menu li a{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .navbar.stickyNav .menu li a{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (aspect-ratio : 731/411) and (orientation : landscape){
+  .navbar .menu li a{
+    font-size: 20px;
+    transform: translateY(100%);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .navbar .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .navbar.stickyNav .menu li a{
+    font-size: 20px;
+    transform: translateY(100%);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (aspect-ratio : 720/540) and (orientation : landscape){
+  .navbar .menu li a{
+    font-size: 20px;
+    padding: 10px 30px;
+    transform: translateY(350%);
+  }
+
+  .navbar .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .navbar.stickyNav .menu li a{
+    font-size: 20px;
+    padding: 10px 30px;
+    transform: translateY(350%);
+  }
+}
+
+@media screen and (aspect-ratio : 667/375) and (orientation : landscape){
+  .navbar .menu li a{
+    font-size: 20px;
+    transform: translateY(100%);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .navbar.stickyNav .menu li a{
+    font-size: 20px;
+    transform: translateY(100%);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (aspect-ratio : 653/280) and (orientation : landscape){
+  .navbar .menu li a{
+    font-size: 20px;
+    transform: translateY(30%);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .navbar.stickyNav .menu li a{
+    font-size: 20px;
+    transform: translateY(30%);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (aspect-ratio : 640/360) and (orientation : landscape){
+  .navbar .menu li a{
+    font-size: 20px;
+    transform: translateY(80%);
+  }
+
+  .navbar .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar.stickyNav .menu li a{
+    font-size: 20px;
+    transform: translateY(80%);
+  }
+}
+
+@media screen and (aspect-ratio : 568/320) and (orientation : landscape){
+  .navbar .menu li a{
+    font-size: 20px;
+    transform: translateY(50%);
+  }
+
+  .navbar .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar.stickyNav .menu li a{
+    font-size: 20px;
+    transform: translateY(50%);
+  }
+}
+
+
 
